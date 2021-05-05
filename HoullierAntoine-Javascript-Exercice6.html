@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+<body>
+<header>
+<h1>Quiz NSI</h1>
+<p>Bienvenue dans ce petit quiz sur le sujet de la NSI, fait en JS, HTML et CSS !<br>
+Veuillez faire les questions dans l'ordre, et essayez pas de tricher, jvous ai à l'oeil !</p>
+</header>
+<a href="https://youtu.be/gwH8v02H2ZY" target="_blank">Voir la solution</a>
+    
+<p>Score actuel : <span id="score">0</span></p>
+
+<h3>Première question</h3> 
+<p>En HTML, un titre en H5 est plus petit qu'un titre H1</p>
+<button class="answer btn" value="true">Vrai</button>
+<button class="answer btn" value="false">Faux</button>
+<p id="result"></p>
+
+<h3>Deuxième question</h3> 
+<p>Qu'est ce que signifie HTML ?</p>
+<select name="html" id="html-select">
+    <option value="default">Choisissez une option</option>
+    <option value="choix1">HyperText Make Language</option>
+    <option value="choix2">HyperText Make Link</option>
+    <option value="choix3">HyperText Markup Language</option>
+    <option value="choix4">HyperText Markup Link</option>
+</select>
+<p id="answer2"></p>
+
+<h3>Troisième question</h3> 
+<p>Laquelle de ces syntaxes est correcte ?</p><div>
+<input type="radio" id="img1" name="radiob" value="imgsrc">&lt;img src=&quot;mon-image.jpg&quot; alt=&quot;Une image&quot;&gt;<br> 
+<input type="radio" id="img2" name="radiob" value="imghref">&lt;img href=&quot;mon-image.jpg&quot; alt=&quot;Une image&quot;&gt;<br> 
+<input type="radio" id="img3" name="radiob" value="imgsrc2">&lt;img&gt;src=&quot;mon-image.jpg&quot; alt=&quot;Une image&quot;&lt;/img&gt;<br>    
+
+<button class="btn first" type="button" onclick=" radioButton();"> Vérifier </button>
+    
+<h4 id="affiche" style= "color:rgb(255, 255, 255)"> </h3>
+<h4 id="erreur" style= "color:red"> </h4>
+<h3>Quatrième question</h3>
+<p>En JavaScript:</p><div>
+  <form>
+    <input type="checkbox" id="ind1" name="ini" value="Bike">
+    <label for="vehicle1">L'indentation n'est pas indispensable</label><br>
+    <input type="checkbox" id="ind2" name="ii" value="Car">
+    <label for="vehicle2">L'indentation est indispensable</label><br>
+    <input type="checkbox" id="ind3" name="bia" value="Boat">
+    <label for="vehicle3">Un bloc d'instruction est délimité par des accolades</label>
+    <div>
+      <button class="btn first" type="button" onclick="checkboxes()"> Vérifier </button> 
+    </div>
+  </form>
+  <h4 id="affiche1" style= "color:rgb(255, 255, 255)"> </h3>
+  <h4 id="faux1" style= "color:red"> </h4>
+
+<h3>Cinquième question</h3>
+<p>On considère la fonction suivante :</p>
+  <code><p>def trouverLettre(phrase,lettre):<br>
+      indexResultat = 0<br>
+        for i in range(len(phrase)):<br>
+          if phrase[i]== lettre:<br>
+            indexResultat=i<br>
+        return indexResultat<br></p></code>
+  <p>Que renvoie l'appel trouverLettre("Vive l’informatique","e") ?
+  </p><div>
+    <form>
+        <input type="text" name="formulaire" id="algo" value="" placeholder="Entrez votre réponse"/>
+        <input class="btn first" type="button" id="enter" value="Valider" onclick="Formulaire(); updateScroll()" />
+    </form>
+       <h4 id="affiche2" style= "color:rgb(255, 255, 255)"> </h3>
+       <h4 id="faux2" style= "color:red"> </h4>
+<h2 id="final"></h1>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
